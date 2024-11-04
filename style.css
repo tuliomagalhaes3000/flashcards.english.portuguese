@@ -1,0 +1,84 @@
+/* Reset básico */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+/* Corpo */
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: linear-gradient(135deg, #4A90E2, #8E44AD);
+}
+
+/* Container */
+.container {
+  text-align: center;
+  width: 300px;
+  max-width: 90%;
+}
+
+/* Estilo dos cartões */
+.card {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1);
+  color: #333;
+  cursor: pointer;
+  position: relative;
+  transition: transform 0.3s;
+}
+
+/* Frontal do cartão */
+.card .front {
+  font-size: 1.5rem;
+  color: #4A90E2;
+}
+
+/* Verso do cartão */
+.card .back {
+  font-size: 1.2rem;
+  color: #8E44AD;
+  display: none;
+}
+
+/* Efeito de virar */
+.card.flipped .front {
+  display: none;
+}
+.card.flipped .back {
+  display: block;
+}
+
+/* Botões de navegação */
+.buttons {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+button {
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  color: #fff;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.prev {
+  background-color: #4A90E2;
+}
+.next {
+  background-color: #8E44AD;
+}
+
+button:hover {
+  opacity: 0.8;
+}
